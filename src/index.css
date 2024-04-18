@@ -229,3 +229,34 @@ a {
   vertical-align: middle;
   width: 42%;
 }
+.game-box-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.runners-side, .runners-side2 {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+.game-1 .runner-team {
+  font-weight: 500;
+  font-size: 14px;
+}
+.game-box-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game-box .game-box-right .special-a {
+  background-color: #84c2f1;
+}
+.gradient-special-a {
+  background: #457fca !important;
+  background: linear-gradient(90deg, #457fca -66.05%, #84c2f1 93%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#457fca",endColorstr="#84c2f1",GradientType=1)!important;
+  color: #000 !important;
+}
+.cursor{
+  cursor: pointer;
+}

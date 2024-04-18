@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { GrLogin } from "react-icons/gr";
 import { FaUserPlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Login from "./Login";
+import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "@chakra-ui/react";
 
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <nav className="navbar navbar-dark bg-dark">
@@ -18,7 +22,7 @@ export default function NavBar() {
           </a>
           <span className="float-end bg-warning px-2 rounded gap-1">
             <span className="bg-dark text-warning">
-              <GrLogin />
+              <GrLogin onClick={()=>setIsOpen(true)} />
               Login
             </span>
             <Link className="text-dark" to='/signup'>
@@ -104,6 +108,20 @@ height={"25px"}
           </span>
         </div>
       </nav>
+      <div>
+      <Modal isOpen={isOpen} onClose={()=>setIsOpen(false)}>
+        <ModalOverlay />
+        <ModalContent>
+          {/* <ModalHeader>Modal Title</ModalHeader> */}
+          {/* <ModalCloseButton /> */}
+          <ModalBody>
+    <Login isOpen={isOpen} setIsOpen={setIsOpen} />
+            {/* <Lorem count={2} /> */}
+          </ModalBody>
+
+        </ModalContent>
+      </Modal>
+      </div>
     </>
   );
 }

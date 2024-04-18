@@ -1,5 +1,6 @@
 import './App.css'
 import HomePage from './Pages/HomePage'
+import SingleSportsPage from './Pages/SingleSportsPage'
 import SportsPage from './Pages/SportsPage'
 import AllCasino from './components/AllCasino'
 import Endorsment from './components/Endorsment'
@@ -25,7 +26,8 @@ function App() {
         <Route path="/" element={<HomePage/>} /> {/* 👈 Renders at /app/ */}
         <Route path='/signup' element={<MainSignup/>}/>
         <Route path='/sports' element={<SportsPage/>}/>
-        
+        <Route path='/sports/sportsbyid/:id' element={<SingleSportsPage/>}/>
+
       </Routes>
     </BrowserRouter>
    
