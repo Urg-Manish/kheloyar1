@@ -9,12 +9,22 @@ export const jsonServerApi = createApi({
     }),
     getseiresMatchsList: builder.mutation({
       query: (body) => ({
-        url: 'https://easybet24.us/api/v5/getseiresMatchsList',
+        url: 'http://localhost:8787/api/v5/getseiresMatchsList',
         method: 'POST',
         body,
       }),
     }),
+    getCricketDetails:builder.mutation({
+      query: (body) => ({
+        url: 'http://localhost:8787/api/v5/get-cricket-detail',
+        method: 'POST',
+        body,
+      }),
+    }),
+    getMatchDetails:builder.query({
+      query:(id)=>`http://localhost:8787/api/v5/get-match-session?match_id=${id}`
+    })
   }),
 });
 
-export const { useGetEventsQuery,useGetseiresMatchsListMutation } = jsonServerApi;
+export const { useGetEventsQuery,useGetseiresMatchsListMutation,useGetCricketDetailsMutation,useGetMatchDetailsQuery } = jsonServerApi;

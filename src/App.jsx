@@ -1,6 +1,8 @@
 import './App.css'
+import CricketDetailPage from './Pages/CricketDetailPage'
 import HomePage from './Pages/HomePage'
 import SingleSportsPage from './Pages/SingleSportsPage'
+import SoccerDetailPage from './Pages/SoccerDetailPage'
 import SportsPage from './Pages/SportsPage'
 import AllCasino from './components/AllCasino'
 import Endorsment from './components/Endorsment'
@@ -27,6 +29,8 @@ function App() {
         <Route path='/signup' element={<MainSignup/>}/>
         <Route path='/sports' element={<SportsPage/>}/>
         <Route path='/sports/sportsbyid/:id' element={<SingleSportsPage/>}/>
+<Route path='/sports/4/:id' element={<CricketDetailPage/>}/>
+<Route path='/sports/1/:id' element={<SoccerDetailPage/>}/>
 
       </Routes>
     </BrowserRouter>

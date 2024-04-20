@@ -260,3 +260,26 @@ a {
 .cursor{
   cursor: pointer;
 }
+.eventm-header {
+  font-family: var(--font_family_global);
+  color: #fff;
+  border-radius: 16px;
+}
+.work-box, body.dark-theme .work-box-2 {
+  background-color: #0a192f !important;
+  border-color: #233554 !important;
+}
+.centralized_css .work-box-1, .centralized_css .work-box-1-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.centralized_css .work-box-1 {
+  padding-bottom: 0;
+}
+.status-box {
+  color: #75a7f2;
+  font-weight: 500;
+  font-size: 16px;
+  background: #ebebeb;
+}
