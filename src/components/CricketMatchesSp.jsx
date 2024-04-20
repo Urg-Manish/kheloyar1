@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useGetseiresMatchsListMutation } from "../services/jsonServerApi";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 export default function CricketMatchesSp({sport_id}) {
   const [getMatches, { data }] = useGetseiresMatchsListMutation();
@@ -21,6 +22,7 @@ export default function CricketMatchesSp({sport_id}) {
     <>
     {/* Inplay Matches */}
     {data?.data?.InplayMatches?.map((i,index)=>(
+      <Link key={index} to={'/sports/cricket/'+i?.match_id}>
       <div key={index}  className="game-box" id="1.227411685">
       <div className="game-box-left" tabIndex="0">
         <app-scorebox className="scorebox_size_same_as_odd">
@@ -100,9 +102,12 @@ export default function CricketMatchesSp({sport_id}) {
         </div>
       </div>
     </div>
+    </Link>
     ))}
     {/* Upcoming matches */}
     {data?.data?.UpCommingMatches?.map((i,index)=>(
+            <Link key={index} to={'/sports/cricket/'+i?.match_id}>
+
       <div key={index}  className="game-box" id="1.227411685">
       <div className="game-box-left" tabIndex="0">
         <app-scorebox className="scorebox_size_same_as_odd">
@@ -184,6 +189,7 @@ export default function CricketMatchesSp({sport_id}) {
         </div>
       </div>
     </div>
+    </Link>
     ))}
      
     </>
