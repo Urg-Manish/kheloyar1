@@ -8,8 +8,8 @@ export default function Esports() {
           alt="icon"
           style={{ height: " 22px !important;" }}
           src="https://dqqdyv927mezc.cloudfront.net/kheloyar/landingpagenew/LiveCasinoWebp/esportsSV.svg"
-        />{" "}
-        Esports{" "}
+        />
+        Esports
       </h2>
       <div
         className="d-flex justify-content-end align-content-center see-all"

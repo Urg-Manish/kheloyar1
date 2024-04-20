@@ -12,7 +12,7 @@ export default function Providers() {
               src="https://dqqdyv927mezc.cloudfront.net/kheloyar/WhiteIcons/Providers.svg"
               height={"25px"}
               alt=""
-            />{" "}
+            />
             Providers
           </span>
           <span className="float-end text-warning">

@@ -1,0 +1,94 @@
+{
+  "navMenus": [
+    {
+      "id": 1,
+      "name": "Exchange",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/exch.png"
+    },
+    {
+      "id": 2,
+      "name": "Roulette",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/roulette.svg"
+    },
+    {
+      "id": 3,
+      "name": "Lightning",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/lightning.svg"
+    },
+    {
+      "id": 4,
+      "name": "Live Casino",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/live-casino.svg"
+    },
+    {
+      "id": 5,
+      "name": "Teen Patti",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/CardGames.svg"
+    },
+    {
+      "id": 6,
+      "name": "Andhar Bahar",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/andhar-bahar.svg"
+    },
+    {
+      "id": 7,
+      "name": "Dragon Tiger",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/Dragon.svg"
+    },
+    {
+      "id": 8,
+      "name": "Baccarat",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/baccarat.svg"
+    },
+    {
+      "id": 9,
+      "name": "Black Jack",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/blackjack.svg"
+    },
+    {
+      "id": 10,
+      "name": "Table Games",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/board.svg"
+    },
+    {
+      "id": 11,
+      "name": "Poker",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/poker.svg"
+    },
+    {
+      "id": 12,
+      "name": "Hold'em",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/holdem.svg"
+    },
+    {
+      "id": 13,
+      "name": "Instant Win",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/instant.svg"
+    },
+    {
+      "id": 14,
+      "name": "Lottery Games",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/lottery.svg"
+    },
+    {
+      "id": 15,
+      "name": "Providers",
+      "link": "http://localhost:8000/",
+      "image": "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/game-providers.svg"
+    }
+  ]
+}

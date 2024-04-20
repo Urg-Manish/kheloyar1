@@ -1,3 +1,4 @@
+
 import './App.css'
 import CricketDetailPage from './Pages/CricketDetailPage'
 import HomePage from './Pages/HomePage'
@@ -17,6 +18,7 @@ import Providers from './components/Providers'
 import Signup from './components/Signup'
 import Slider from './components/Slider'
 import Sports from './components/Sports'
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -31,6 +33,9 @@ function App() {
         <Route path='/sports/sportsbyid/:id' element={<SingleSportsPage/>}/>
 <Route path='/sports/4/:id' element={<CricketDetailPage/>}/>
 <Route path='/sports/1/:id' element={<SoccerDetailPage/>}/>
+
+        <Route path='/all-sports' element={<AllSports/>}/>
+        <Route path='/roulette-game' element={<RouletteGame/>}/>
 
       </Routes>
     </BrowserRouter>
