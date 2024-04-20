@@ -35,7 +35,7 @@ export default function NavBar() {
         </div>
         <div className="container-fluid text-white justify-content-center " style={{flexWrap:'nowrap'}}>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
               src="		https://dqqdyv927mezc.cloudfront.net/kheloyar/web/landing-page-sw-images/landing-nav/Exchange.svg"
               height={"25px"}
@@ -44,7 +44,7 @@ export default function NavBar() {
             &nbsp; SPORTS
           </span>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
               src="		https://dqqdyv927mezc.cloudfront.net/ssexch/web/images/sp-bk.svg"
               height={"25px"}
@@ -53,7 +53,7 @@ export default function NavBar() {
             &nbsp; SPORTS BOOK
           </span>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
               src="https://dqqdyv927mezc.cloudfront.net/kheloyar/web/landing-page-sw-images/landing-nav/InPlay.svg"
               height={"25px"}
@@ -62,7 +62,7 @@ export default function NavBar() {
             &nbsp; IN PLAY
           </span>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
               src="	https://dqqdyv927mezc.cloudfront.net/kheloyar/web/landing-page-sw-images/landing-nav/Casino.svg"
               height={"25px"}
@@ -71,7 +71,7 @@ export default function NavBar() {
             &nbsp; ALL CASINOS
           </span>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
 src="	https://dqqdyv927mezc.cloudfront.net/kheloyar/web/landing-page-sw-images/landing-nav/Cricket.svg"
 height={"25px"}
@@ -80,7 +80,7 @@ height={"25px"}
             &nbsp; CRICKET
           </span>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
               src="	https://dqqdyv927mezc.cloudfront.net/kheloyar/web/landing-page-sw-images/landing-nav/Soccer.svg"
               height={"25px"}
@@ -89,7 +89,7 @@ height={"25px"}
             &nbsp; SOCCER
           </span>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
               src="https://dqqdyv927mezc.cloudfront.net/kheloyar/web/landing-page-sw-images/landing-nav/Tennis.svg"
               height={"25px"}
@@ -98,7 +98,7 @@ height={"25px"}
             &nbsp; TENNIS
           </span>
           <span className="navbtn py-2  rounded">
-            {" "}
+            
             <img
               src="https://dqqdyv927mezc.cloudfront.net/kheloyar/web/landing-page-sw-images/landing-nav/HorseRacing.webp"
               height={"25px"}

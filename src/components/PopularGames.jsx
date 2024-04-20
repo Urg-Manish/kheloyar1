@@ -10,7 +10,7 @@ export default function PopularGames() {
               src="	https://dqqdyv927mezc.cloudfront.net/kheloyar/PT/Popular%20Games%20Icon.svg"
               height={"25px"}
               alt=""
-            />{" "}
+            />
             Popular Games
           </span>
          
