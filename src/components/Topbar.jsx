@@ -48,7 +48,7 @@ export default function Topbar() {
             <span>LIAB: 0.00</span>
           </div>
         </div>
-        <div className="dropdown">
+        <div className="dropdown custom-dropdown">
           <button
             className="btn border-0 dropdown-toggle px-2"
             type="button"
