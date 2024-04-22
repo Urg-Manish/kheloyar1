@@ -132,18 +132,18 @@ export default function Topbar() {
       </div>
       <div className="dark-top hidenShow">
         <ul className="topmenubar">
-          <li routerlink="/sports">
-            <Link to="/" className="add-color">
+          <li >
+            <Link to="/sports" className="add-color">
               Exchange
             </Link>
           </li>
           <li>
-            <Link to="/" className="add-color">
+            <Link to="/all-sports" className="add-color">
               Sports Book
             </Link>
           </li>
           <li>
-            <Link to="/" className="casino-blink">
+            <Link to="/casinos/games/roulette" className="casino-blink">
               Casino
             </Link>
           </li>

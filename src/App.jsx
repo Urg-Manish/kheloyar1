@@ -18,7 +18,9 @@ import Providers from './components/Providers'
 import Signup from './components/Signup'
 import Slider from './components/Slider'
 import Sports from './components/Sports'
+import AllSports from './Pages//AllSports';
 
+import RouletteGame from './Pages/RouletteGame'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -32,10 +34,11 @@ function App() {
         <Route path='/sports' element={<SportsPage/>}/>
         <Route path='/sports/sportsbyid/:id' element={<SingleSportsPage/>}/>
 <Route path='/sports/4/:id' element={<CricketDetailPage/>}/>
-<Route path='/sports/1/:id' element={<SoccerDetailPage/>}/>
+<Route path='/sports/1/:id' element={<SoccerDetailPage sport_id={1}/>}/>
+<Route path='/sports/2/:id' element={<SoccerDetailPage sport_id={2}/>}/>
 
         <Route path='/all-sports' element={<AllSports/>}/>
-        <Route path='/roulette-game' element={<RouletteGame/>}/>
+        <Route path='casinos/games/:type' element={<RouletteGame/>}/>
 
       </Routes>
     </BrowserRouter>

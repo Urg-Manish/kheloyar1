@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar'
 import NavBar from '../components/NavBar'
 import Slider from '../components/Slider'
 import CricketMatchesSp from '../components/CricketMatchesSp'
+import { Link } from 'react-router-dom'
 
 export default function SportsPage() {
   return (
@@ -67,10 +68,12 @@ export default function SportsPage() {
           <div className="card" style={{ borderRadius: '2px', boxSizing: 'border-box' }}>
             <div>
               <ul className="nav-tabs nav" role="tablist">
+             <Link  to='/sports/sportsbyid/4'>
              
                 <li className="mx-2 my-auto nav-item ng-star-inserted">
                 <span className="sports-icon sports4"></span>   <span>Cricket</span>
                 </li>
+             </Link>
               </ul>
               <div className="mt-0 tab-content">
                 <CricketMatchesSp sport_id={4}/>
@@ -82,10 +85,13 @@ export default function SportsPage() {
           <div className="card" style={{ borderRadius: '2px', boxSizing: 'border-box' }}>
             <div>
               <ul className="nav-tabs nav" role="tablist">
-             
+             <Link to='/sports/sportsbyid/1'
+             >
+
                 <li className="mx-2 my-auto nav-item ng-star-inserted">
                 <span className="sports-icon sports1"></span>   <span>Soccer</span>
                 </li>
+             </Link>
               </ul>
               <div className="mt-0 tab-content">
                 <CricketMatchesSp sport_id={1}/>

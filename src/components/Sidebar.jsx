@@ -1,76 +1,103 @@
 import React, { useEffect, useState } from "react";
-import { useGetEventsQuery, useGetseiresMatchsListMutation } from "../services/jsonServerApi";
+import {
+  useGetEventsQuery,
+  useGetseiresMatchsListMutation,
+} from "../services/jsonServerApi";
 import { Link } from "react-router-dom";
 let casinoList = [
-  "Roulette",
-  "Live Casino",
-  "Teen Patti",
-  "Andar Bahar",
-  "Dragon Tiger",
-  "Baccarat",
-  "Black Jack",
-  "Table Games",
+  {
+    name: "Roulette",
+    link: "roulette",
+    img: "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/roulette.svg",
+  },
+  {
+    name: "Live Casino",
+    link: "live-casino",
+    img: "	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/live-casino.svg",
+  },
+  {
+    name: "Teen Patti",
+    link: "teen-patti",
+    img: "	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/CardGames.svg",
+  },
+  {
+    name: "Andar Bahar",
+    link: "andar-bahar",
+    img: "https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/andhar-bahar.svg",
+  },
+  {
+    name: "Dragon Tiger",
+    link: "dragon-tiger",
+    img: "	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/Dragon.svg",
+  },
+
+  { name: "Baccarat", link: "baccarat", img:'	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/baccarat.svg' },
+  { name: "Black Jack", link: "black-jack",img:'	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/blackjack.svg' },
+  { name: "Table Games", link: "table-games",img:'	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/board.svg' },
+  { name: "Poker", link: "Poker",img:'	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/poker.svg' },
+  { name: "Instant Win", link: "instant-win",img:'	https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/casinoV4/instant.svg' },
+
 ];
-let eventTypes=[
+let eventTypes = [
   {
-    "id": "4",
-    "name": "Cricket",
-    "childNode": "getcompetition/4",
-    "detail": "sportsbyid/4"
+    id: "4",
+    name: "Cricket",
+    childNode: "getcompetition/4",
+    detail: "sportsbyid/4",
   },
   {
-    "id": "1",
-    "name": "Soccer",
-    "childNode": "getcompetition/1",
-    "detail": "sportsbyid/1"
+    id: "1",
+    name: "Soccer",
+    childNode: "getcompetition/1",
+    detail: "sportsbyid/1",
   },
   {
-    "id": "2",
-    "name": "Tennis",
-    "childNode": "getcompetition/2",
-    "detail": "sportsbyid/2"
+    id: "2",
+    name: "Tennis",
+    childNode: "getcompetition/2",
+    detail: "sportsbyid/2",
   },
   {
-    "id": "7",
-    "name": "Horse Racing",
-    "childNode": "getcountries/7",
-    "detail": "raceschedule/7/ALL"
+    id: "7",
+    name: "Horse Racing",
+    childNode: "getcountries/7",
+    detail: "raceschedule/7/ALL",
   },
   {
-    "id": "13",
-    "name": "Horse Race Todays Card",
-    "childNode": "todayraces/7",
-    "detail": "raceschedule/7/today"
+    id: "13",
+    name: "Horse Race Todays Card",
+    childNode: "todayraces/7",
+    detail: "raceschedule/7/today",
   },
   {
-    "id": "4339",
-    "name": "Greyhound Racing",
-    "childNode": "getcountries/4339",
-    "detail": "raceschedule/4339/ALL"
+    id: "4339",
+    name: "Greyhound Racing",
+    childNode: "getcountries/4339",
+    detail: "raceschedule/4339/ALL",
   },
   {
-    "id": "15",
-    "name": "Greyhound Todays Card",
-    "childNode": "todayraces/4339",
-    "detail": "raceschedule/4339/today"
+    id: "15",
+    name: "Greyhound Todays Card",
+    childNode: "todayraces/4339",
+    detail: "raceschedule/4339/today",
   },
   {
-    "id": "6423",
-    "name": "American Football",
-    "childNode": "getcompetition/6423",
-    "detail": "sportsbyid/6423"
-  }
-]
+    id: "6423",
+    name: "American Football",
+    childNode: "getcompetition/6423",
+    detail: "sportsbyid/6423",
+  },
+];
 function Sidebar() {
   const { data } = useGetEventsQuery();
   const [active, setActive] = useState();
-  const [getMatches, { data:matchData }] = useGetseiresMatchsListMutation();
+  const [getMatches, { data: matchData }] = useGetseiresMatchsListMutation();
   useEffect(() => {
     getMatches({
       limit: 50,
       pageno: 1,
       series_id: 0,
-      sport_id:4 ,
+      sport_id: 4,
       type: "home",
     });
   }, []);
@@ -136,9 +163,7 @@ function Sidebar() {
           {/* List of sports and events */}
           {active == 1 &&
             popularEventTypes?.map((i, index) => (
-              
               <div className="market-border" tabIndex="0" key={index}>
-              
                 <span className="sports-icon-grey sports4"></span>
                 <span> {i?.eventName} </span>
               </div>
@@ -175,8 +200,12 @@ function Sidebar() {
           {active == 2 &&
             casinoList?.map((i, index) => (
               <div className="market-border" tabIndex="0" key={index}>
-                <span className="sports-icon-grey sports4"></span>
-                <span> {i} </span>
+                <Link to={"/casinos/games/" + i?.link}>
+                  <span>
+                    <img height={"20px"} src={i?.img} alt="" />
+                  </span>
+                  <span> {i?.name} </span>
+                </Link>
               </div>
             ))}
 
@@ -196,7 +225,10 @@ function Sidebar() {
               style={{ height: "21px !important", marginTop: "5px" }}
               src="https://dqqdyv927mezc.cloudfront.net/kheloyar/vsport.png"
             />
+            <Link to={`/casinos/games/virtual`}>
+
             <span className="special-list"> Virtual Sports </span>
+            </Link>
           </label>
           <img
             className="arrow mt-0"
@@ -209,22 +241,20 @@ function Sidebar() {
           className="d-flex align-items-center justify-content-between market-border chamak1 cursor "
           style={{ position: "relative", height: "32px" }}
           tabIndex="0"
-          
         >
           <Link to={`/sports`}>
-
-          <label 
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              cursor:'pointer'
-            }}
+            <label
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
             >
-            <span className="sports-icon-sports sportsSpecial"></span>
-            <span className="special-list"> Sports </span>
-          </label>
-            </Link>
+              <span className="sports-icon-sports sportsSpecial"></span>
+              <span className="special-list"> Sports </span>
+            </label>
+          </Link>
           <img
             className="arrow mt-0"
             style={{ transform: "rotate(90deg)" }}
@@ -232,25 +262,28 @@ function Sidebar() {
           />
         </div>
         {/* List of sports */}
-     {   eventTypes?.map((i,index)=>(
-        <li key={index} >
-          <Link  className="cursor" to={`/sports/sportsbyid/${i?.id}`}>
-
-        <div className="d-flex align-items-center justify-content-between market-border">
-          <label data="a" htmlFor="4" className="item cursor">
-            <span className={"sports-icon-grey sports"+i?.id}></span>
-            <span className="first-level ">{i?.name}</span>
-          </label>
-          <img
-            className="arrow mt-0"
-            src="https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/arrow.svg"
-            />
-        </div>
-        <ul data-check="1" id="list-1" className="list-1 sidebar-links"></ul>
+        {eventTypes?.map((i, index) => (
+          <li key={index}>
+            <Link className="cursor" to={`/sports/sportsbyid/${i?.id}`}>
+              <div className="d-flex align-items-center justify-content-between market-border">
+                <label data="a" htmlFor="4" className="item cursor">
+                  <span className={"sports-icon-grey sports" + i?.id}></span>
+                  <span className="first-level ">{i?.name}</span>
+                </label>
+                <img
+                  className="arrow mt-0"
+                  src="https://dqqdyv927mezc.cloudfront.net/kheloyar/clientweb/images/arrow.svg"
+                />
+              </div>
+              <ul
+                data-check="1"
+                id="list-1"
+                className="list-1 sidebar-links"
+              ></ul>
             </Link>
-      </li>      
-            ))}
-        
+          </li>
+        ))}
+
         {/* Add more sports here */}
       </ul>
     </nav>

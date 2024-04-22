@@ -165,11 +165,11 @@ export default function CricketDetailPage() {
                   </div>
                   {/* Fancy */}
                   <div className="mt-0 tab-content text-white">
-                    <ul className="nav-tabs nav" role="tablist">
+                   {mdata?.data?.length>0&& <ul className="nav-tabs nav" role="tablist">
                       <li className="mx-2 my-auto nav-item ng-star-inserted">
                         <FcInfo /> <span>Fancy Market</span>
                       </li>
-                    </ul>
+                    </ul>}
 
                     {mdata?.data?.map((i, index) => (
                       <div key={"index"} className="game-box" id="1.227411685">
