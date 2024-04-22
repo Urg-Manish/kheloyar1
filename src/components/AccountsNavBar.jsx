@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function AccountsNavBar() {
-  return (
+  return ( 
     <>
       <nav className="navbar accounts-nav navbar-dark py-1">
         <div className="container-fluid justify-content-between">

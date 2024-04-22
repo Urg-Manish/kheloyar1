@@ -261,28 +261,28 @@ export default function UPIManual() {
                           <form className="p-4 border rounded filter-form">
                             <div className="row">
                               <div className="col-md-12">
-                                <label className="p-0" htmlFor="PaymentOption">
-                                  Payment Options
-                                </label>
-                                <div className="input-group mb-3">
-                                  <select
-                                    id="PaymentOption"
-                                    className="form-control form-select"
-                                  >
-                                    <option value="0: Bank">Bank</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div className="col-md-12">
-                                <label className="p-0" htmlFor="holdername">
-                                  Holder Name
+                                <label className="p-0" htmlFor="fileUpload">
+                                  Upload File
                                 </label>
                                 <div className="input-group mb-3">
                                   <input
-                                    id="holdername"
-                                    type="text"
+                                    id="fileUpload"
+                                    type="file"
                                     className="form-control"
-                                    placeholder="Holder Name"
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-md-12">
+                                <label className="p-0" htmlFor="amount">
+                                  Amount
+                                </label>
+                                <div className="input-group mb-3">
+                                  <input
+                                    id="amount"
+                                    type="number"
+                                    className="form-control"
+                                    placeholder="Amount"
+                                    defaultValue={'0'}
                                   />
                                 </div>
                               </div>
@@ -316,43 +316,6 @@ export default function UPIManual() {
                                       />
                                     </div>
                                   </div>
-                                </div>
-                              </div>
-                              <div className="col-md-12">
-                                <label className="p-0" htmlFor="accountNo">
-                                  Account No
-                                </label>
-                                <div className="input-group mb-3">
-                                  <input
-                                    id="accountNo"
-                                    type="number"
-                                    className="form-control"
-                                    placeholder="Account No"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-md-12">
-                                <label className="p-0" htmlFor="ibnifsccode">
-                                  IBAN/IFSC Number
-                                </label>
-                                <div className="input-group mb-3">
-                                  <input
-                                    id="ibnifsccode"
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="IBAN/IFSC Number"
-                                  />
-                                </div>
-                              </div>
-                              <div className="add-account-btn mt-2">
-                                <div className="d-flex m-auto w-50">
-                                  <button
-                                    type="submit"
-                                    className="btn submit-btn w-100"
-                                    disabled=""
-                                  >
-                                    Submit
-                                  </button>
                                 </div>
                               </div>
                             </div>
