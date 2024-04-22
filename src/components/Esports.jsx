@@ -17,6 +17,7 @@ export default function Esports() {
       >
         <div className="see-all-btn cursor-pointer"> See All </div>
         <div className="ml-1">
+            
           <svg
             aria-hidden="true"
             focusable="false"
