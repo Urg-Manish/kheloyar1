@@ -1,4 +1,4 @@
-import "./App.css";
+
 import './App.css'
 import CricketDetailPage from './Pages/CricketDetailPage'
 import HomePage from './Pages/HomePage'
@@ -18,6 +18,7 @@ import Providers from './components/Providers'
 import Signup from './components/Signup'
 import Slider from './components/Slider'
 import Sports from './components/Sports'
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CricketDetailPage from "./Pages/CricketDetailPage";
 import HomePage from "./Pages/HomePage";
@@ -54,36 +55,26 @@ import DepositHistory from "./Pages/Reports/DepositHistory";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} /> {/* 👈 Renders at /app/ */}
-          <Route path="/signup" element={<MainSignup />} />
-          <Route path="/sports" element={<SportsPage />} />
-          <Route path="/sports/sportsbyid/:id" element={<SingleSportsPage />} />
-          <Route path="/sports/4/:id" element={<CricketDetailPage />} />
-          <Route path="/sports/1/:id" element={<SoccerDetailPage />} />
-          <Route path="/all-sports" element={<AllSports />} />
-          <Route path="/roulette-game" element={<RouletteGame />} />
-          <Route path="/reports/casinobets" element={<CasinoBets />} />
-          <Route path="/reports/fancybets" element={<FancyBets />} />
-          <Route path="/reports/sportsbets" element={<SportsBets />} />
-          <Route path="/reports/account-statement" element={<AccountStatement />} />
-          <Route path="/reports/profit-loss" element={<ProfitLoss />} />
-          <Route path="/reports/results" element={<Results />} />
-          <Route path="/reports/activity-logs" element={<ActivityLogs />} />
-          <Route path="/reports/payment/upi-manual" element={<UPIManual />} />
-          <Route path="/reports/withdraw" element={<Withdraw />} />
-          <Route path="/reports/stake-buttons" element={<StakeButtons />} />
-          <Route path="/change-password" element={<ChangePassword />} />
-          <Route path="/reports/deposit-history" element={<DepositHistory />} />
-        </Routes>
-      </BrowserRouter>
+   <>
+     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>} /> {/* 👈 Renders at /app/ */}
+        <Route path='/signup' element={<MainSignup/>}/>
+        <Route path='/sports' element={<SportsPage/>}/>
+        <Route path='/sports/sportsbyid/:id' element={<SingleSportsPage/>}/>
+<Route path='/sports/4/:id' element={<CricketDetailPage/>}/>
+<Route path='/sports/1/:id' element={<SoccerDetailPage/>}/>
 
-      {/* <Signup/> */}
-      {/* <MainSignup/> */}
-    </>
-  );
+        <Route path='/all-sports' element={<AllSports/>}/>
+        <Route path='/roulette-game' element={<RouletteGame/>}/>
+
+      </Routes>
+    </BrowserRouter>
+   
+   {/* <Signup/> */}
+   {/* <MainSignup/> */}
+   </>
+  )
 }
 
 export default App;
