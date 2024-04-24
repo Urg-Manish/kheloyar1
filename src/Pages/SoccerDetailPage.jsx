@@ -31,7 +31,7 @@ export default function SoccerDetailPage({sport_id}) {
             <Sidebar />
             <div className="col">
               <div className="row">
-                <div className="eventm-header side-content">
+                {/* <div className="eventm-header side-content">
                     <Link to={'/'}>
 
                   <span className="market-head market-head1" tabIndex="0">
@@ -45,17 +45,12 @@ export default function SoccerDetailPage({sport_id}) {
                     Cricket
                   </span>
                   </Link>
-                  {/* <span className="v-div mx-2">&gt;</span>
-                  <span className="market-head market-head1" tabIndex="0">
-                    Indian Premier League
-                  </span> */}
+              
                   <span className="v-div mx-2">&gt;</span>
                   <span className="market-head">
                     Lucknow Super Giants v Chennai Super Kings
                   </span>
-                  {/* <span className="v-div mx-2">&gt;</span>
-                  <span className="market-head">Match Odds</span> */}
-                </div>
+                </div> */}
                 <div className="col-sm-12 side-content">
                   <div className="mt-0 tab-content text-white">
                     <ul className="nav-tabs nav" role="tablist">

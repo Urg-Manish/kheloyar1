@@ -22,9 +22,20 @@ import AllSports from './Pages//AllSports';
 
 import RouletteGame from './Pages/RouletteGame'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useStore } from './zustrore'
+import Cookies from 'universal-cookie'
+import { useEffect } from 'react'
 
 function App() {
+const{count,login,setLogin,setToken}= useStore()
+const cookies = new Cookies();
+useEffect(()=>{
 
+  if(cookies.get('token')!==null){ setLogin(true)
+    setToken(cookies.get('token'))
+  }
+},[])
+console.log({count},{login})
   return (
    <>
      <BrowserRouter>

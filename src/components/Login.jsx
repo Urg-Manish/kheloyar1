@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useUserLoginMutation } from "../services/jsonServerApi";
 import Cookies from "universal-cookie";
+import axios from "axios";
 
 const Login = ({ isOpen = false, setIsOpen }) => {
   const [Login, { data, isSuccess }] = useUserLoginMutation();
@@ -12,9 +13,10 @@ const Login = ({ isOpen = false, setIsOpen }) => {
     termsAccepted: false,
   });
   useEffect(() => {
-    if (isSuccess) cookies.set("token", data?.data?.token);
-    console.log(data?.data);
-  }, [isSuccess]);
+    console.log({data:data?.data?.token});
+    cookies.set("token", data?.data?.token);
+
+  }, [isSuccess,data]);
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const newValue = type === "checkbox" ? checked : value;
@@ -25,19 +27,26 @@ const Login = ({ isOpen = false, setIsOpen }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     Login({
       user_name: formData?.username,
       password: formData?.password,
-    });
+    }); 
+// await axios.post('http://localhost:8787/api/v5/login',{
+//     user_name: formData?.username,
+//     password: formData?.password,}).then((data)=>{
+//       console.log({data})
+//     })
+
     console.log(formData); // You can replace this with your logic to store the data
     // Close modal after form submission
-    setIsOpen(false);
+    // setIsOpen(false);
   };
 
   return (
     <div className="modal-dialog">
+      {/* {JSON.stringify(data)} */}
       <div className="modal-content">
         {isOpen && (
           <div className="modal-body">

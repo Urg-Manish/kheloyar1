@@ -8,6 +8,7 @@ import Sidebar from "../components/Sidebar";
 import moment from "moment";
 import { ImInfo } from "react-icons/im";
 import { FcInfo } from "react-icons/fc";
+import BettingComponent from "../components/BettingComponent";
 
 export default function CricketDetailPage() {
   const params = useParams();
@@ -31,7 +32,7 @@ export default function CricketDetailPage() {
             <Sidebar />
             <div className="col">
               <div className="row">
-                <div className="eventm-header side-content">
+                {/* <div className="eventm-header side-content">
                     <Link to={'/'}>
 
                   <span className="market-head market-head1" tabIndex="0">
@@ -45,17 +46,12 @@ export default function CricketDetailPage() {
                     Cricket
                   </span>
                   </Link>
-                  {/* <span className="v-div mx-2">&gt;</span>
-                  <span className="market-head market-head1" tabIndex="0">
-                    Indian Premier League
-                  </span> */}
                   <span className="v-div mx-2">&gt;</span>
                   <span className="market-head">
                     Lucknow Super Giants v Chennai Super Kings
                   </span>
-                  {/* <span className="v-div mx-2">&gt;</span>
-                  <span className="market-head">Match Odds</span> */}
-                </div>
+            
+                </div> */}
                 <div className="col-sm-12 side-content">
                   <div className="mt-0 tab-content text-white">
                     <ul className="nav-tabs nav" role="tablist">
@@ -172,6 +168,7 @@ export default function CricketDetailPage() {
                     </ul>}
 
                     {mdata?.data?.map((i, index) => (
+                      <>
                       <div key={"index"} className="game-box" id="1.227411685">
                         <div className="game-box-left" tabIndex="0">
                           <app-scorebox className="scorebox_size_same_as_odd">
@@ -275,6 +272,8 @@ export default function CricketDetailPage() {
                           </div>
                         </div>
                       </div>
+                      <BettingComponent/>
+                      </>
                     ))}
                   </div>
                 </div>
