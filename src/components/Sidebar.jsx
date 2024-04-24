@@ -110,7 +110,7 @@ function Sidebar() {
         <a
           className="d-flex align-items-center"
           style={{ textDecoration: "unset" }}
-          href="/home"
+          href="/"
         >
           {/* <img alt="" className="top_light" src="https://dqqdyv927mezc.cloudfront.net/kheloyar/web/Kheloyar-Logo-for-light-theme.png" /> */}
           <img

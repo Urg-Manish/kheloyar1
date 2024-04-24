@@ -22,7 +22,7 @@ export default function CricketMatchesSp({sport_id}) {
     <>
     {/* Inplay Matches */}
     {data?.data?.InplayMatches?.map((i,index)=>(
-      <Link key={index} to={'/sports/cricket/'+i?.match_id}>
+      <Link key={index} to={`/sports/${sport_id}/`+i?.match_id}>
       <div key={index}  className="game-box" id="1.227411685">
       <div className="game-box-left" tabIndex="0">
         <app-scorebox className="scorebox_size_same_as_odd">
@@ -106,7 +106,7 @@ export default function CricketMatchesSp({sport_id}) {
     ))}
     {/* Upcoming matches */}
     {data?.data?.UpCommingMatches?.map((i,index)=>(
-            <Link key={index} to={'/sports/cricket/'+i?.match_id}>
+            <Link key={index} to={`/sports/${sport_id}/`+i?.match_id}>
 
       <div key={index}  className="game-box" id="1.227411685">
       <div className="game-box-left" tabIndex="0">

@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
 }
-body.dark-theme .search {
+ .search {
   background-color: #1e2028;
 }
 .search-box {
@@ -1491,4 +1491,90 @@ a {
   /* display: flex; */
   height: 33px;
   color: white;
+}
+.inline-betslip{
+  padding: .35rem !important;
+  border-radius: 8px;
+}
+.inline-betslip .betslip-input {
+  display: flex;
+  flex-direction: row;
+}
+.inline-betslip .betslip-input .inputOdds {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.inline-betslip .betslip-input .inputOdds .input-wrap {
+  width: 100%;
+  display: block;
+  margin-left: .35rem;
+}
+.inline-betslip .betslip-input .inputOdds .input-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.inline-betslip .betslip-input .inputOdds .input-wrap {
+  width: 100%;
+  display: block;
+  margin-left: .35rem;
+}
+.inline-betslip .betslip-input .inputOdds .input-wrap {
+  width: 100%;
+  display: block;
+  margin-left: .35rem;
+}
+.inline-betslip .betslip-input .inputOdds .input-wrapper button.btn-left {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.inline-betslip .betslip-stakebtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.betslip-stakebtns {
+  margin-top: .43rem !important;
+}
+.inputBtns button {
+  background-color: #233554 !important;
+}
+.back.inline-betslip {
+  background: linear-gradient(90deg, #84c2f1 -66.05%, #457fca 100%) !important;
+}
+.inline-betslip .betslip-input .inputOdds .input-wrapper button.btn-left {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.inline-betslip button.btn-left,  .inline-betslip button.btn-right,  .input-wrapper button,  .input-wrapper button.btn-left,  .input-wrapper button.btn-right {
+  background-color: #233554 !important;
+  color: #fff;
+}
+.inline-betslip .betslip-input .inputOdds .input-wrapper button {
+  height: 38px;
+  background-color: #ddd;
+  border: none;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  transition: all 2s;
+}
+.input-wrapper button {
+  width: 24px !important;
+  font-size: 9px !important;
+  padding-left: 6px !important;
+}
+.input-wrapper svg{
+  height: fit-content;
+}
+.input-wrapper button.btn-right {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
